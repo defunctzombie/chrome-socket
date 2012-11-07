@@ -46,3 +46,10 @@ The API is modeled after node.js sockets. However, it emits and deals with `Arra
 
 #### error
 
+## install
+
+Use [npm](https://npmjs.org) to install.
+
+```
+npm install chrome-socket
+```
