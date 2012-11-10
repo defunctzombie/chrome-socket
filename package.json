@@ -1,6 +1,6 @@
 {
   "name": "chrome-socket",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "streaming socket interface for chrome tcp",
   "main": "socket.js",
   "scripts": {
