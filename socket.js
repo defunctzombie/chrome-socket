@@ -28,10 +28,18 @@ Socket.prototype.write = function(data) {
 
 /// write {ArrayBuffer} data and then end connection
 Socket.prototype.end = function(data) {
-    chrome.socket.disconnect(self.socket_id);
+    var self = this;
+
+    if (data) {
+        self.write(data);
+    }
+
+    chrome.socket.disconnect(self._socket_info.socketId);
 
     self.emit('end');
     self.emit('close');
+
+    return self;
 };
 
 /// connect to the given port and host
